@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.66.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/skeleton.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="alternate" href="index.xml" type="application/rss+xml" title="Video Research">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  <title>FrameBridge: </title>
+</head>
+
+<body rightmargin="150" leftmargin="150" topmargin="100" bottommargin="100" line-height:160%>
+  <font size="5">
+
+    <div class="container">
+
+      <header role="banner">
+
+      </header>
+      <main role="main">
+        <article itemscope itemtype="https://schema.org/BlogPosting">
+          <br></br>
+          <h1 itemprop="headline" align="center">
+            <font color="000093" size="7">FrameBridge: Improving Image-to-Video <br> Generation with Bridge Models</br>
+            </font>
+          </h1>
+          <br></br>
+          <p style="line-height:1" align="center"><b>
+              <font color="061E61">Anonymous Authors
+            </b></p>
+          <section itemprop="entry-text">
+
+            <p style="text-align: justify;">
+              <font color="061E61"> We sincerely thank all the reviewers for their advice on enhancing the experiment part of our work. We have trained a FrameBridge model longer (i.e., 100k iterations with batch size 64)
+                on WebVid-2M, which generates videos with better quality than the initial version of our model (trained with 20k iterations). This demo page is used as part of our rebuttal material, and consists of two sections.
+                In the first section, we show several samples which are representative of our model's capacity for I2V generation. In the second section, we provide samples with more 
+                evident motion (e.g., camera movements, vehicles, animals in motion). We hope the demos can address the reviewers' concerns about the generation performance of FrameBridge.
+                (As all the videos in our training dataset WebVid-2M has a watermark, it may be difficult to avoid the presence of watermarks in certain demos.)
+              </font>
+            </p>
+
+            <p><b>
+                <font color="061E61">Demo samples of FrameBridge-100k:</font>
+            </b></p>
+
+          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+            <thead>
+              <tr>
+                <td colspan="2" width="40%">
+                  <font color="061E61">Sample 1: "camera zoom-in, fantastic and beautiful garden"</font>
+                </td>
+                <td colspan="2" width="40%">
+                  <font color="061E61">Sample 2: "cat playing the guitar, ethereal, dreamlike, butterfly flying"</font>
+                </td>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <td scope="col" width="20%">
+                  <font color="061E61">Condition Image:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">I2V Result:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">Condition Image:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">I2V Result:</font>
+                </td>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <td scope="col" width="20%">
+                  <img src="demo/FrameBridge-100k/prompt/image_garden.jpg" width="250">
+                </td>
+                <td scope="col" width="20%">
+                  <video width="250" controls>
+                    <source src="demo/FrameBridge-100k/videos/camera zoom-in, fantastic and beautiful garden.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                </td>
+                <td scope="col" width="20%">
+                  <img src="demo/FrameBridge-100k/prompt/image-cat6.jpg" width="250">
+                </td>
+                <td scope="col" width="20%">
+                  <video width="250" controls>
+                    <source src="demo/FrameBridge-100k/videos/cat playing the guitar, ethereal, dreamlike, butterfly flying.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                </td>
+              </tr>
+            </thead>
+          </table>
+
+          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+            <thead>
+              <tr>
+                <td colspan="2" width="40%">
+                  <font color="061E61">Sample 3: "huge waves crashing against the shore"</font>
+                </td>
+                <td colspan="2" width="40%">
+                  <font color="061E61">Sample 4: "leaves of maple trees flutter down"</font>
+                </td>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <td scope="col" width="20%">
+                  <font color="061E61">Condition Image:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">I2V Result:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">Condition Image:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">I2V Result:</font>
+                </td>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <td scope="col" width="20%">
+                  <img src="demo/FrameBridge-100k/prompt/image-housetower.jpg" width="250">
+                </td>
+                <td scope="col" width="20%">
+                  <video width="250" controls>
+                    <source src="demo/FrameBridge-100k/videos/huge waves crashing against the shore.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                </td>
+                <td scope="col" width="20%">
+                  <img src="demo/FrameBridge-100k/prompt/image-leaves-2.jpg" width="250">
+                </td>
+                <td scope="col" width="20%">
+                  <video width="250" controls>
+                    <source src="demo/FrameBridge-100k/videos/leaves of maple trees flutter down.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                </td>
+              </tr>
+            </thead>
+          </table>
+
+          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+            <thead>
+              <tr>
+                <td colspan="2" width="40%">
+                  <font color="061E61">Sample 5: "young man typing keyboard, looking at the screen"</font>
+                </td>
+                <td colspan="2" width="40%">
+                  <font color="061E61">Sample 6: "pot boiling on the campfire"</font>
+                </td>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <td scope="col" width="20%">
+                  <font color="061E61">Condition Image:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">I2V Result:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">Condition Image:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">I2V Result:</font>
+                </td>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <td scope="col" width="20%">
+                  <img src="demo/FrameBridge-100k/prompt/image-typing-2.jpg" width="250">
+                </td>
+                <td scope="col" width="20%">
+                  <video width="250" controls>
+                    <source src="demo/FrameBridge-100k/videos/young man typing keyboard, looking at the screen.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                </td>
+                <td scope="col" width="20%">
+                  <img src="demo/FrameBridge-100k/prompt/image-pot.jpg" width="250">
+                </td>
+                <td scope="col" width="20%">
+                  <video width="250" controls>
+                    <source src="demo/FrameBridge-100k/videos/pot boiling on the campfire.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                </td>
+              </tr>
+            </thead>
+          </table>
+
+          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+            <thead>
+              <tr>
+                <td colspan="2" width="40%">
+                  <font color="061E61">Sample 7: "deer sits on the grass, looking around"</font>
+                </td>
+                <td colspan="2" width="40%">
+                  <font color="061E61">Sample 8: "rabbit reading a book"</font>
+                </td>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <td scope="col" width="20%">
+                  <font color="061E61">Condition Image:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">I2V Result:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">Condition Image:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">I2V Result:</font>
+                </td>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <td scope="col" width="20%">
+                  <img src="demo/FrameBridge-100k/prompt/image-deer.jpg" width="250">
+                </td>
+                <td scope="col" width="20%">
+                  <video width="250" controls>
+                    <source src="demo/FrameBridge-100k/videos/deer sits on the grass, looking around.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                </td>
+                <td scope="col" width="20%">
+                  <img src="demo/FrameBridge-100k/prompt/image-rabbit2.jpg" width="250">
+                </td>
+                <td scope="col" width="20%">
+                  <video width="250" controls>
+                    <source src="demo/FrameBridge-100k/videos/rabbit reading a book.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                </td>
+              </tr>
+            </thead>
+          </table>
+          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+            <thead>
+              <tr>
+                <td colspan="2" width="40%">
+                  <font color="061E61">Sample 9: "knight walking with the sword in hand"</font>
+                </td>
+                <td colspan="2" width="40%">
+                  <font color="061E61">Sample 10: "drumer beating the drum"</font>
+                </td>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <td scope="col" width="20%">
+                  <font color="061E61">Condition Image:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">I2V Result:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">Condition Image:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">I2V Result:</font>
+                </td>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <td scope="col" width="20%">
+                  <img src="demo/FrameBridge-100k/prompt/image-knight.jpg" width="250">
+                </td>
+                <td scope="col" width="20%">
+                  <video width="250" controls>
+                    <source src="demo/FrameBridge-100k/videos/knight walking with the sword in hand.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                </td>
+                <td scope="col" width="20%">
+                  <img src="demo/FrameBridge-100k/prompt/image-drum.jpg" width="250">
+                </td>
+                <td scope="col" width="20%">
+                  <video width="250" controls>
+                    <source src="demo/FrameBridge-100k/videos/a man beat the drum.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                </td>
+              </tr>
+            </thead>
+          </table>
+
+          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+            <thead>
+              <tr>
+                <td colspan="2" width="40%">
+                  <font color="061E61">Sample 11: "a red panda eating bamboo in a zoo"</font>
+                </td>
+                <td colspan="2" width="40%">
+                  <font color="061E61">Sample 12: "bird on the branch, flaping wings"</font>
+                </td>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <td scope="col" width="20%">
+                  <font color="061E61">Condition Image:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">I2V Result:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">Condition Image:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">I2V Result:</font>
+                </td>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <td scope="col" width="20%">
+                  <img src="demo/FrameBridge-100k/prompt/a red panda eating bamboo in a zoo.-0.jpg" width="250">
+                </td>
+                <td scope="col" width="20%">
+                  <video width="250" controls>
+                    <source src="demo/FrameBridge-100k/videos/a red panda eating bamboo in a zoo.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                </td>
+                <td scope="col" width="20%">
+                  <img src="demo/FrameBridge-100k/prompt/image-bird.jpg" width="250">
+                </td>
+                <td scope="col" width="20%">
+                  <video width="250" controls>
+                    <source src="demo/FrameBridge-100k/videos/bird on the branch, flaping wings.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                </td>
+              </tr>
+            </thead>
+          </table>
+
+          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+            <thead>
+              <tr>
+                <td colspan="2" width="40%">
+                  <font color="061E61">Sample 13: "a man is talking"</font>
+                </td>
+                <td colspan="2" width="40%">
+                  <font color="061E61">Sample 14: "ship sailing in the waves"</font>
+                </td>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <td scope="col" width="20%">
+                  <font color="061E61">Condition Image:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">I2V Result:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">Condition Image:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">I2V Result:</font>
+                </td>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <td scope="col" width="20%">
+                  <img src="demo/FrameBridge-100k/prompt/image-talk.jpg" width="250">
+                </td>
+                <td scope="col" width="20%">
+                  <video width="250" controls>
+                    <source src="demo/FrameBridge-100k/videos/a man is talking.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                </td>
+                <td scope="col" width="20%">
+                  <img src="demo/FrameBridge-100k/prompt/image-ship.jpg" width="250">
+                </td>
+                <td scope="col" width="20%">
+                  <video width="250" controls>
+                    <source src="demo/FrameBridge-100k/videos/ship sailing in the waves.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                </td>
+              </tr>
+            </thead>
+          </table>  
+
+          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+            <thead>
+              <tr>
+                <td colspan="2" width="40%">
+                  <font color="061E61">Sample 15: "girl singing under the spotlight with deep affection, close eyes slowly, gently"</font>
+                </td>
+                <td colspan="2" width="40%">
+                  <font color="061E61">Sample 16: "a car is moving on the road"</font>
+                </td>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <td scope="col" width="20%">
+                  <font color="061E61">Condition Image:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">I2V Result:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">Condition Image:</font>
+                </td>
+                <td scope="col" width="20%">
+                  <font color="061E61">I2V Result:</font>
+                </td>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <td scope="col" width="20%">
+                  <img src="demo/FrameBridge-100k/prompt/image-singer.jpg" width="250">
+                </td>
+                <td scope="col" width="20%">
+                  <video width="250" controls>
+                    <source src="demo/FrameBridge-100k/videos/girl singing under the spotlight with deep affection, close eyes slowly, gently.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                </td>
+                <td scope="col" width="20%">
+                  <img src="demo/FrameBridge-100k/prompt/image_car.jpg" width="250">
+                </td>
+                <td scope="col" width="20%">
+                  <video width="250" controls>
+                    <source src="demo/FrameBridge-100k/videos/a car is moving on the road.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                </td>
+              </tr>
+            </thead>
+          </table>
+          
+            <p><b>
+              <font color="061E61">Demos with evident motion</font>
+            </b></p>
+
+            <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+              <thead>
+                <tr>
+                  <td colspan="2" width="40%">
+                    <font color="061E61">Sample 1: "a bald eagle flying over a tree filled forest"</font>
+                  </td>
+                  <td colspan="2" width="40%">
+                    <font color="061E61">Sample 2: "bird flying off the tree"</font>
+                  </td>
+                </tr>
+              </thead>
+              <thead>
+                <tr>
+                  <td scope="col" width="20%">
+                    <font color="061E61">Condition Image:</font>
+                  </td>
+                  <td scope="col" width="20%">
+                    <font color="061E61">I2V Result:</font>
+                  </td>
+                  <td scope="col" width="20%">
+                    <font color="061E61">Condition Image:</font>
+                  </td>
+                  <td scope="col" width="20%">
+                    <font color="061E61">I2V Result:</font>
+                  </td>
+                </tr>
+              </thead>
+              <thead>
+                <tr>
+                  <td scope="col" width="20%">
+                    <img src="demo/FrameBridge-100k-motion/prompt/a bald eagle flying over a tree filled forest.-0.jpg" width="250">
+                  </td>
+                  <td scope="col" width="20%">
+                    <video width="250" controls>
+                      <source src="demo/FrameBridge-100k-motion/videos/a bald eagle flying over a tree filled forest-1.mp4" type="video/mp4">
+                      Your browser does not support HTML video.
+                    </video>
+                  </td>
+                  <td scope="col" width="20%">
+                    <img src="demo/FrameBridge-100k-motion/prompt/image-bird.jpg" width="250">
+                  </td>
+                  <td scope="col" width="20%">
+                    <video width="250" controls>
+                      <source src="demo/FrameBridge-100k-motion/videos/image-bird1.mp4" type="video/mp4">
+                      Your browser does not support HTML video.
+                    </video>
+                  </td>
+                </tr>
+              </thead>
+            </table>
+
+            <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+              <thead>
+                <tr>
+                  <td colspan="2" width="40%">
+                    <font color="061E61">Sample 3: "dandelion blown by the wind"</font>
+                  </td>
+                  <td colspan="2" width="40%">
+                    <font color="061E61">Sample 4: "camera zoom-in rapidly, close look at the flower"</font>
+                  </td>
+                </tr>
+              </thead>
+              <thead>
+                <tr>
+                  <td scope="col" width="20%">
+                    <font color="061E61">Condition Image:</font>
+                  </td>
+                  <td scope="col" width="20%">
+                    <font color="061E61">I2V Result:</font>
+                  </td>
+                  <td scope="col" width="20%">
+                    <font color="061E61">Condition Image:</font>
+                  </td>
+                  <td scope="col" width="20%">
+                    <font color="061E61">I2V Result:</font>
+                  </td>
+                </tr>
+              </thead>
+              <thead>
+                <tr>
+                  <td scope="col" width="20%">
+                    <img src="demo/FrameBridge-100k-motion/prompt/image-dandelion3.jpg" width="250">
+                  </td>
+                  <td scope="col" width="20%">
+                    <video width="250" controls>
+                      <source src="demo/FrameBridge-100k-motion/videos/dandelion blown by the wind.mp4" type="video/mp4">
+                      Your browser does not support HTML video.
+                    </video>
+                  </td>
+                  <td scope="col" width="20%">
+                    <img src="demo/FrameBridge-100k-motion/prompt/image-flower2.jpg" width="250">
+                  </td>
+                  <td scope="col" width="20%">
+                    <video width="250" controls>
+                      <source src="demo/FrameBridge-100k-motion/videos/camera zoom-in rapidly, close look at the flower.mp4" type="video/mp4">
+                      Your browser does not support HTML video.
+                    </video>
+                  </td>
+                </tr>
+              </thead>
+            </table>
+
+            <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+              <thead>
+                <tr>
+                  <td colspan="2" width="40%">
+                    <font color="061E61">Sample 5: "camera zoom-out"</font>
+                  </td>
+                  <td colspan="2" width="40%">
+                    <font color="061E61">Sample 6: "camera pans around in a sweeping arc"</font>
+                  </td>
+                </tr>
+              </thead>
+              <thead>
+                <tr>
+                  <td scope="col" width="20%">
+                    <font color="061E61">Condition Image:</font>
+                  </td>
+                  <td scope="col" width="20%">
+                    <font color="061E61">I2V Result:</font>
+                  </td>
+                  <td scope="col" width="20%">
+                    <font color="061E61">Condition Image:</font>
+                  </td>
+                  <td scope="col" width="20%">
+                    <font color="061E61">I2V Result:</font>
+                  </td>
+                </tr>
+              </thead>
+              <thead>
+                <tr>
+                  <td scope="col" width="20%">
+                    <img src="demo/FrameBridge-100k-motion/prompt/image-apple.jpg" width="250">
+                  </td>
+                  <td scope="col" width="20%">
+                    <video width="250" controls>
+                      <source src="demo/FrameBridge-100k-motion/videos/camera zoom-out.mp4" type="video/mp4">
+                      Your browser does not support HTML video.
+                    </video>
+                  </td>
+                  <td scope="col" width="20%">
+                    <img src="demo/FrameBridge-100k-motion/prompt/image-cake.jpg" width="250">
+                  </td>
+                  <td scope="col" width="20%">
+                    <video width="250" controls>
+                      <source src="demo/FrameBridge-100k-motion/videos/camera pans around in a sweeping arc-1.mp4" type="video/mp4">
+                      Your browser does not support HTML video.
+                    </video>
+                  </td>
+                </tr>
+              </thead>
+            </table>
+
+            <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+              <thead>
+                <tr>
+                  <td colspan="2" width="40%">
+                    <font color="061E61">Sample 7: "camera rotates smoothly"</font>
+                  </td>
+                  <td colspan="2" width="40%">
+                    <font color="061E61">Sample 8: "cars moving on the road"</font>
+                  </td>
+                </tr>
+              </thead>
+              <thead>
+                <tr>
+                  <td scope="col" width="20%">
+                    <font color="061E61">Condition Image:</font>
+                  </td>
+                  <td scope="col" width="20%">
+                    <font color="061E61">I2V Result:</font>
+                  </td>
+                  <td scope="col" width="20%">
+                    <font color="061E61">Condition Image:</font>
+                  </td>
+                  <td scope="col" width="20%">
+                    <font color="061E61">I2V Result:</font>
+                  </td>
+                </tr>
+              </thead>
+              <thead>
+                <tr>
+                  <td scope="col" width="20%">
+                    <img src="demo/FrameBridge-100k-motion/prompt/image-hamburger.jpg" width="250">
+                  </td>
+                  <td scope="col" width="20%">
+                    <video width="250" controls>
+                      <source src="demo/FrameBridge-100k-motion/videos/camera rotates smoothly-1.mp4" type="video/mp4">
+                      Your browser does not support HTML video.
+                    </video>
+                  </td>
+                  <td scope="col" width="20%">
+                    <img src="demo/FrameBridge-100k-motion/prompt/image-cars.jpg" width="250">
+                  </td>
+                  <td scope="col" width="20%">
+                    <video width="250" controls>
+                      <source src="demo/FrameBridge-100k-motion/videos/cars moving on the road.mp4" type="video/mp4">
+                      Your browser does not support HTML video.
+                    </video>
+                  </td>
+                </tr>
+              </thead>
+            </table>
+
+          </section>
+        </article>
+      </main>
+
+    </div>
+
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-139981676-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+    <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+         HTML: ["input/TeX","output/HTML-CSS"],
+         TeX: {
+                Macros: {
+                         bm: ["\\boldsymbol{#1}", 1],
+                         argmax: ["\\mathop{\\rm arg\\,max}\\limits"],
+                         argmin: ["\\mathop{\\rm arg\\,min}\\limits"]},
+                extensions: ["AMSmath.js","AMSsymbols.js"],
+                equationNumbers: { autoNumber: "AMS" } },
+         extensions: ["tex2jax.js"],
+         jax: ["input/TeX","output/HTML-CSS"],
+         tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                    processEscapes: true },
+         "HTML-CSS": { availableFonts: ["TeX"],
+                       linebreaks: { automatic: true } }
+     });
+ </script>
+
+    <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+       tex2jax: {
+         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+       }
+     });
+ </script>
+
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+      </script>
+
+
+
+
+</body>
+
+</html>
