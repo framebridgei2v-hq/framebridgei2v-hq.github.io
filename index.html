@@ -39,8 +39,9 @@
           <section itemprop="entry-text">
 
             <p style="text-align: justify;">
-              <font color="061E61"> We sincerely thank all the reviewers for their advice on enhancing the experiment part of our work. We have trained a FrameBridge model longer (i.e., 100k iterations with batch size 64)
-                on WebVid-2M, which generates videos with better quality than the initial version of our model (trained with 20k iterations). This demo page is used as part of our rebuttal material, and consists of two sections.
+              <font color="061E61"> We sincerely thank all the reviewers for their advice on enhancing the experiment part of our work. 
+                We have trained a FrameBridge model with more computational resources (i.e., 100k iterations versus 20k iterations with a batch size of 64 in our initial submission), which effectively improves generation quality.
+                This demo page is used as part of our rebuttal material, and consists of two sections.
                 In the first section, we show several samples which are representative of our model's capacity for I2V generation. In the second section, we provide samples with more 
                 evident motion (e.g., camera movements, vehicles, animals in motion). We hope the demos can address the reviewers' concerns about the generation performance of FrameBridge.
                 (As all the videos in our training dataset WebVid-2M has a watermark, it may be difficult to avoid the presence of watermarks in certain demos.)
@@ -58,7 +59,7 @@
                   <font color="061E61">Sample 1: "camera zoom-in, fantastic and beautiful garden"</font>
                 </td>
                 <td colspan="2" width="40%">
-                  <font color="061E61">Sample 2: "cat playing the guitar, ethereal, dreamlike, butterfly flying"</font>
+                  <font color="061E61">Sample 2: "pot boiling on the campfire"</font>
                 </td>
               </tr>
             </thead>
@@ -90,11 +91,11 @@
                   </video>
                 </td>
                 <td scope="col" width="20%">
-                  <img src="demo/FrameBridge-100k/prompt/image-cat6.jpg" width="250">
+                  <img src="demo/FrameBridge-100k/prompt/image-pot.jpg" width="250">
                 </td>
                 <td scope="col" width="20%">
                   <video width="250" controls>
-                    <source src="demo/FrameBridge-100k/videos/cat playing the guitar, ethereal, dreamlike, butterfly flying.mp4" type="video/mp4">
+                    <source src="demo/FrameBridge-100k/videos/pot boiling on the campfire.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                   </video>
                 </td>
@@ -160,7 +161,7 @@
                   <font color="061E61">Sample 5: "young man typing keyboard, looking at the screen"</font>
                 </td>
                 <td colspan="2" width="40%">
-                  <font color="061E61">Sample 6: "pot boiling on the campfire"</font>
+                  <font color="061E61">Sample 6: "ship sailing in the waves"</font>
                 </td>
               </tr>
             </thead>
@@ -192,11 +193,11 @@
                   </video>
                 </td>
                 <td scope="col" width="20%">
-                  <img src="demo/FrameBridge-100k/prompt/image-pot.jpg" width="250">
+                  <img src="demo/FrameBridge-100k/prompt/image-ship.jpg" width="250">
                 </td>
                 <td scope="col" width="20%">
                   <video width="250" controls>
-                    <source src="demo/FrameBridge-100k/videos/pot boiling on the campfire.mp4" type="video/mp4">
+                    <source src="demo/FrameBridge-100k/videos/ship sailing in the waves.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                   </video>
                 </td>
@@ -211,7 +212,7 @@
                   <font color="061E61">Sample 7: "deer sits on the grass, looking around"</font>
                 </td>
                 <td colspan="2" width="40%">
-                  <font color="061E61">Sample 8: "rabbit playing the piano"</font>
+                  <font color="061E61">Sample 8: "rabbit reading the piano"</font>
                 </td>
               </tr>
             </thead>
@@ -360,61 +361,10 @@
             <thead>
               <tr>
                 <td colspan="2" width="40%">
-                  <font color="061E61">Sample 13: "a man is talking"</font>
+                  <font color="061E61">Sample 13: "girl singing under the spotlight with deep affection, close eyes slowly, gently"</font>
                 </td>
                 <td colspan="2" width="40%">
-                  <font color="061E61">Sample 14: "ship sailing in the waves"</font>
-                </td>
-              </tr>
-            </thead>
-            <thead>
-              <tr>
-                <td scope="col" width="20%">
-                  <font color="061E61">Condition Image:</font>
-                </td>
-                <td scope="col" width="20%">
-                  <font color="061E61">I2V Result:</font>
-                </td>
-                <td scope="col" width="20%">
-                  <font color="061E61">Condition Image:</font>
-                </td>
-                <td scope="col" width="20%">
-                  <font color="061E61">I2V Result:</font>
-                </td>
-              </tr>
-            </thead>
-            <thead>
-              <tr>
-                <td scope="col" width="20%">
-                  <img src="demo/FrameBridge-100k/prompt/image-talk.jpg" width="250">
-                </td>
-                <td scope="col" width="20%">
-                  <video width="250" controls>
-                    <source src="demo/FrameBridge-100k/videos/a man is talking.mp4" type="video/mp4">
-                    Your browser does not support HTML video.
-                  </video>
-                </td>
-                <td scope="col" width="20%">
-                  <img src="demo/FrameBridge-100k/prompt/image-ship.jpg" width="250">
-                </td>
-                <td scope="col" width="20%">
-                  <video width="250" controls>
-                    <source src="demo/FrameBridge-100k/videos/ship sailing in the waves.mp4" type="video/mp4">
-                    Your browser does not support HTML video.
-                  </video>
-                </td>
-              </tr>
-            </thead>
-          </table>  
-
-          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-            <thead>
-              <tr>
-                <td colspan="2" width="40%">
-                  <font color="061E61">Sample 15: "girl singing under the spotlight with deep affection, close eyes slowly, gently"</font>
-                </td>
-                <td colspan="2" width="40%">
-                  <font color="061E61">Sample 16: "a car is moving on the road"</font>
+                  <font color="061E61">Sample 14: "a car is moving on the road"</font>
                 </td>
               </tr>
             </thead>
